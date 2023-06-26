@@ -7,7 +7,7 @@
  * Reference: https://projecteuler.net/problem=2
  */
 
-function fibAddEven(limit: number, start?: number[]): number {
+export default function fibAddEven(limit: number, start?: number[]): number {
 	let fibItems: number[] = [];
 	fibItems = start && start.length > 0 ? fibItems.concat(start) : fibItems.concat([1,2]);
 	let total = fibItems.reduce((preSum, fibItem) => fibItem % 2 === 0
@@ -32,6 +32,3 @@ function fibAddEven(limit: number, start?: number[]): number {
 
 	return total;
 }
-
-// Call function with 4 million
-console.log(fibAddEven(4000000, [3, 5]));
